@@ -345,12 +345,6 @@ h5 {
     font-size: 12px;
 }
 
-img {
-    width: 30vw;
-    display: block; /* Change display to block to control margin */
-    margin: 0 auto; /* Horizontally center the image */
-    padding: 10px;
-  }
 
  .subheader1 {
     font-family: Inter,sans-serif;
@@ -443,7 +437,7 @@ PORTFOLIO SECTION
   margin-bottom: 5px;
 }
 
-video, iframe{
+video, iframe, img{
   width: 100%;
   height: auto;
   border-radius: 5px;
