@@ -433,7 +433,6 @@ PORTFOLIO SECTION
   bottom: 0; /* Align descriptions to the bottom of the containers */
   left: 0;
   margin-top: 10px;  width: 100%; /* Make descriptions take the full width of containers */
-  background-color: rgba(255, 255, 255, 0.8); /* Add a background to improve readability */
   margin-bottom: 5px;
 }
 
