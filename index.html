@@ -183,6 +183,23 @@
             text-decoration: underline;
         }
 
+        .article-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            transition: var(--transition);
+        }
+
+        .article-link:hover {
+            background: var(--primary-light);
+            transform: translateY(-1px);
+        }
+
         @media (max-width: 768px) {
             .menu-toggle {
                 display: block;
@@ -277,6 +294,7 @@
                     <div class="project-content">
                         <time class="project-date">March 2025</time>
                         <h3 class="project-title">Re-Release Radar</h3>
+                        <a href="https://medium.com/@smullins998/re-release-radar-57d900444f3d" class="article-link">Read Article</a>
                     </div>
                 </a>
             </article>
