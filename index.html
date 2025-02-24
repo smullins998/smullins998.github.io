@@ -143,6 +143,8 @@
             background: var(--background-secondary);
             border: 1px solid var(--border);
             transition: var(--transition);
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
@@ -158,6 +160,9 @@
 
         .project-content {
             padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
         }
 
         .project-date {
@@ -184,8 +189,8 @@
         }
 
         .article-link {
-            display: inline-block;
-            margin-top: 1rem;
+            align-self: flex-start;
+            margin-top: auto;
             padding: 0.5rem 1rem;
             background: var(--primary);
             color: white;
