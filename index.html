@@ -149,7 +149,8 @@
         }
 
         .now a,
-        .job-org a {
+        .job-org a,
+        .company-name a {
             color: inherit;
             text-decoration: underline;
             text-decoration-thickness: 1px;
@@ -158,7 +159,8 @@
         }
 
         .now a:hover,
-        .job-org a:hover {
+        .job-org a:hover,
+        .company-name a:hover {
             color: var(--accent);
             text-decoration-color: var(--accent);
         }
@@ -211,10 +213,68 @@
             margin-bottom: 1.5rem;
         }
 
-        .job + .job {
+        .job + .job,
+        .job + .company,
+        .company + .job {
             margin-top: 1.9rem;
             padding-top: 1.9rem;
             border-top: 1px solid var(--line);
+        }
+
+        .company-name {
+            font-size: 1.05rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin-bottom: 1.15rem;
+        }
+
+        .roles {
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+        .roles::before {
+            content: "";
+            position: absolute;
+            left: 3px;
+            top: 0.55rem;
+            bottom: 0.55rem;
+            width: 1px;
+            background: var(--line);
+        }
+
+        .role {
+            position: relative;
+        }
+
+        .role + .role {
+            margin-top: 1.25rem;
+        }
+
+        .role::before {
+            content: "";
+            position: absolute;
+            left: -1.2rem;
+            top: 0.42rem;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--bg);
+            border: 1.5px solid var(--muted);
+        }
+
+        .role-top {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 0.75rem 1.5rem;
+            align-items: baseline;
+            margin-bottom: 0.25rem;
+        }
+
+        .role h3 {
+            font-size: 1.02rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
         }
 
         .job-top {
@@ -242,7 +302,8 @@
             white-space: nowrap;
         }
 
-        .job p {
+        .job p,
+        .role p {
             color: var(--muted);
             max-width: 62ch;
         }
@@ -391,7 +452,8 @@
                 font-size: 3.1rem;
             }
 
-            .job-top {
+            .job-top,
+            .role-top {
                 grid-template-columns: 1fr;
                 gap: 0.15rem;
             }
@@ -460,14 +522,16 @@
                 <h1>Sean Mullins</h1>
                 <p class="lede">Senior Analyst at <a href="https://www.toasttab.com" target="_blank" rel="noopener noreferrer"><em>Toast</em></a>.</p>
                 <p class="bio">
-                    I work on analytics and AI at Toast in New York. Previously I was an AI Engineer at OpenExchange. Outside of work I make music as
+                    I work on analytics and AI at Toast in New York. Previously I was an AI Engineer at
+                    <a href="https://openexc.com/" target="_blank" rel="noopener noreferrer">OpenExchange</a>.
+                    Outside of work I make music as
                     <a href="https://linktr.ee/wearegoons" target="_blank" rel="noopener noreferrer">Goons</a>,
                     play tennis, tinker with audio, and
                     <a href="https://www.goodreads.com/user/show/184380869-sean-mullins" target="_blank" rel="noopener noreferrer">read</a>.
                 </p>
                 <div class="now">
                     <span><strong>Now</strong> <a href="https://www.toasttab.com" target="_blank" rel="noopener noreferrer">Toast</a> · New York</span>
-                    <span><strong>Previously</strong> OpenExchange</span>
+                    <span><strong>Previously</strong> <a href="https://openexc.com/" target="_blank" rel="noopener noreferrer">OpenExchange</a></span>
                     <span><strong>Focus</strong> AI, analytics, audio</span>
                 </div>
             </header>
@@ -488,17 +552,31 @@
                     </p>
                 </article>
 
-                <article class="job">
-                    <div class="job-top">
-                        <div>
-                            <h3>AI Engineer</h3>
-                            <p class="job-org">OpenExchange</p>
-                        </div>
-                        <p class="job-dates">Apr 2024 – Apr 2025</p>
+                <article class="company">
+                    <p class="company-name"><a href="https://openexc.com/" target="_blank" rel="noopener noreferrer">OpenExchange</a></p>
+                    <div class="roles">
+                        <article class="role">
+                            <div class="role-top">
+                                <h3>AI Engineer</h3>
+                                <p class="job-dates">Apr 2024 – Apr 2025</p>
+                            </div>
+                            <p>LLMs, automation, and Python.</p>
+                        </article>
+                        <article class="role">
+                            <div class="role-top">
+                                <h3>Financial Analyst</h3>
+                                <p class="job-dates">May 2021 – Sep 2022</p>
+                            </div>
+                            <p>Reporting, finance, and NLP.</p>
+                        </article>
+                        <article class="role">
+                            <div class="role-top">
+                                <h3>Data Analyst</h3>
+                                <p class="job-dates">Aug 2020 – May 2021</p>
+                            </div>
+                            <p>ETL, SQL, and BI.</p>
+                        </article>
                     </div>
-                    <p>
-                        LLMs, automation, and Python.
-                    </p>
                 </article>
 
                 <article class="job">
@@ -511,32 +589,6 @@
                     </div>
                     <p>
                         Python, Power BI, and healthcare loans.
-                    </p>
-                </article>
-
-                <article class="job">
-                    <div class="job-top">
-                        <div>
-                            <h3>Financial Analyst</h3>
-                            <p class="job-org">OpenExchange</p>
-                        </div>
-                        <p class="job-dates">May 2021 – Sep 2022</p>
-                    </div>
-                    <p>
-                        Reporting, finance, and NLP.
-                    </p>
-                </article>
-
-                <article class="job">
-                    <div class="job-top">
-                        <div>
-                            <h3>Data Analyst</h3>
-                            <p class="job-org">OpenExchange</p>
-                        </div>
-                        <p class="job-dates">Aug 2020 – May 2021</p>
-                    </div>
-                    <p>
-                        ETL, SQL, and BI.
                     </p>
                 </article>
             </section>
